@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://csh8xbyq7vuub"]
+
+[ext_resource type="Script" uid="uid://cp8p84tjs62ax" path="res://trip/trip.gd" id="1_5qwvp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdhyg"]
+
+[node name="Trip" type="RigidBody2D" unique_id=90412871]
+script = ExtResource("1_5qwvp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1496413557]
+scale = Vector2(1.2731767, 17.199394)
+shape = SubResource("RectangleShape2D_mdhyg")

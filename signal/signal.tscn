@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://v0mesa6pi2ki"]
+
+[ext_resource type="Script" uid="uid://cma3rgm0syqdh" path="res://signal/signal.gd" id="1_1w0pj"]
+[ext_resource type="Texture2D" uid="uid://bj8jiotxxrshx" path="res://signal/signal.png" id="1_ypuou"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w0pj"]
+atlas = ExtResource("1_ypuou")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwygw"]
+atlas = ExtResource("1_ypuou")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypuou"]
+atlas = ExtResource("1_ypuou")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ko5gv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w0pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwygw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypuou")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Signal" type="Node2D" unique_id=1702977810]
+script = ExtResource("1_1w0pj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1796629998]
+sprite_frames = SubResource("SpriteFrames_ko5gv")
+frame_progress = 0.031801894
