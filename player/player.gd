@@ -75,7 +75,7 @@ func _on_ConsumeTimer_timeout():
 	jump = BASE_JUMP + (8 * treatsConsumed)
 	
 	if treatsConsumed >= 4:
-		speed = 20
+		speed = 40
 	
 	pass
 	

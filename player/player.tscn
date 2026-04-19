@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cb4ykqqpytdsg" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Texture2D" uid="uid://bfkwl8w7tyy8" path="res://player/white.png" id="2_rkbax"]
 [ext_resource type="Texture2D" uid="uid://d0tq3mxtak66y" path="res://player/player-tiles.png" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://demo5k7804g00" path="res://player/arrow.gd" id="4_qjkh3"]
+[ext_resource type="Texture2D" uid="uid://cd75lk0b3gbmm" path="res://overlays/arrow.png" id="4_yw30f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
 size = Vector2(5.8242645, 26.959497)
@@ -97,6 +99,49 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t03j"]
+atlas = ExtResource("4_yw30f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ieo8"]
+atlas = ExtResource("4_yw30f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yllr7"]
+atlas = ExtResource("4_yw30f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebec5"]
+atlas = ExtResource("4_yw30f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb6p2"]
+atlas = ExtResource("4_yw30f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yllr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t03j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ieo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yllr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebec5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb6p2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D" unique_id=1704750102]
 script = ExtResource("1_rkbax")
 
@@ -130,5 +175,16 @@ animation = &"consumed1"
 
 [node name="ConsumeTimer" type="Timer" parent="." unique_id=635351058]
 one_shot = true
+
+[node name="Arrow" type="CanvasLayer" parent="." unique_id=440906480]
+visible = false
+
+[node name="Node2D" type="Node2D" parent="Arrow" unique_id=630550124]
+script = ExtResource("4_qjkh3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arrow/Node2D" unique_id=589854643]
+position = Vector2(487, 20)
+scale = Vector2(0.8014358, 0.8007689)
+sprite_frames = SubResource("SpriteFrames_yllr7")
 
 [connection signal="timeout" from="ConsumeTimer" to="." method="_on_ConsumeTimer_timeout"]
