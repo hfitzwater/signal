@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://85eeftv20d0n"]
+
+[ext_resource type="Texture2D" uid="uid://diohpy22ti4y2" path="res://overlays/controls.png" id="1_r0yg2"]
+
+[node name="Controls" type="Node2D" unique_id=1221269193]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=936846653]
+z_index = 15
+texture = ExtResource("1_r0yg2")

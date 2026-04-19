@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://btfosvmmsj4j4"]
+
+[ext_resource type="Texture2D" uid="uid://cyjpc0sfdfta4" path="res://screens/intro-screen.png" id="1_aryxx"]
+[ext_resource type="Script" uid="uid://dka2t6l6f5xdp" path="res://screens/intro_screen.gd" id="1_phdd6"]
+
+[node name="IntroScreen" type="Node2D" unique_id=1494384008]
+script = ExtResource("1_phdd6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1664221024]
+position = Vector2(256, 144)
+texture = ExtResource("1_aryxx")

@@ -22,6 +22,10 @@ var lastDir = 0
 
 func _ready() -> void:
 	_anim.play("default")
+	
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		pass
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -65,13 +69,21 @@ func _on_ConsumeTimer_timeout():
 	
 	_anim.play("consumed" + str(treatsConsumed))
 	
-	empowered = false
+	empowered = false 
 	gravity = BASE_GRAVITY
 	speed = BASE_SPEED - (3 * treatsConsumed)
 	jump = BASE_JUMP + (8 * treatsConsumed)
 	
+	if treatsConsumed >= 4:
+		speed = 20
+	
 	pass
 	
 func _hit_trip(trip: Trip):
-	print("end game")
+	trip.free()
+	
+	var tree = get_tree()
+	
+	if tree:
+		tree.change_scene_to_file("res://screens/outro-screen.tscn")
 	pass

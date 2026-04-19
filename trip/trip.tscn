@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mdhyg"]
 
 [node name="Trip" type="RigidBody2D" unique_id=90412871]
+mass = 0.1
 script = ExtResource("1_5qwvp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1496413557]

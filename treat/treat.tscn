@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dmwbg8ab4fwu1" path="res://treat/treat.png" id="2_jn52n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofawo"]
-radius = 3.0
+radius = 9.0
 
 [node name="Treat" type="RigidBody2D" unique_id=350124583]
 mass = 0.1
@@ -14,4 +14,5 @@ script = ExtResource("1_doglm")
 shape = SubResource("CircleShape2D_ofawo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1386729481]
+scale = Vector2(3.6799946, 3.1599982)
 texture = ExtResource("2_jn52n")

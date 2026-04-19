@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://csg28kmri6oli"]
+
+[ext_resource type="Script" uid="uid://p3bvyqsaefhd" path="res://screens/outro_screen.gd" id="1_nawv7"]
+[ext_resource type="Texture2D" uid="uid://cvqe0mhf5wlo3" path="res://screens/outro-screen.png" id="2_rjw6b"]
+
+[node name="OutroScreen" type="Node2D" unique_id=1808347165]
+script = ExtResource("1_nawv7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=608731216]
+position = Vector2(256, 144)
+texture = ExtResource("2_rjw6b")
